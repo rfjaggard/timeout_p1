@@ -17,6 +17,19 @@ you will need to test your new solution manually using node.
 
 Example:
 
+]
+***********************************************************************/
+
+function batchTimeouts(callbacks, delays) {
+  //const delay = delays * 1000;
+  const arr = [];
+ 
+  for (let i = 0; i < delays.length; i++) {
+    arr.push(setTimeout(callbacks[i], delays[i]));
+  }
+  return arr;
+}
+
 const sayHello = () => console.log('hi');
 const sayGoodbye = () => console.log('bye');
 const shout = () => console.log('WHAT?');
@@ -29,13 +42,7 @@ const timeoutObjs = batchTimeouts(tasks, delays);
 //  'hi' after 500 ms
 //  'WHAT?' after 900 ms
 
-console.log(timeoutObjs); // [ Timeout {...},  Timeout {...}, Timeout {...} ]
-***********************************************************************/
-
-function batchTimeouts(callbacks, delays) {
-  // Your code here 
-}
-
+console.log(timeoutObjs); // [ Timeout {...},  Timeout {...}, Timeout {...} 
 /**************DO NOT MODIFY ANYTHING UNDER THIS  LINE*****************/
 try {
   module.exports = batchTimeouts;
