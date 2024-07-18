@@ -24,6 +24,9 @@ setSecondsTimeoutArgs(function(arg1, arg2) {
 
 function setSecondsTimeoutArgs(cb, delayInSeconds, ...args) {
   // Your code here 
+
+  const delay = delayInSeconds * 1000
+  setTimeout(cb(...args), delay)
 }
 
 /**************DO NOT MODIFY ANYTHING UNDER THIS  LINE*****************/
