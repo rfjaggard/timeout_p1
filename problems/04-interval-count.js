@@ -18,7 +18,25 @@ intervalCount(function() {
 
 function intervalCount(cb, delay, amount) {
   // Your code here 
-}
+
+  console.log(cb)
+  console.log(delay)
+  console.log(amount)
+
+  // let i = 0
+  // while(i<amount){
+  //   setInterval()
+  //   i++
+  // }
+
+  let counter = 0
+  const intervalID = setInterval(()=>{cb(); counter++
+    if(counter===amount){
+      clearInterval(intervalID);
+    }
+  },delay);
+  }
+
 
 /**************DO NOT MODIFY ANYTHING UNDER THIS  LINE*****************/
 try {
