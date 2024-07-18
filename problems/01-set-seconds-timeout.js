@@ -14,6 +14,15 @@ node with the examples below. Use the command
 
 Examples:
 
+
+***********************************************************************/
+
+function setSecondsTimeout(cb, delayInSeconds) {
+  const delay = delayInSeconds * 1000;
+  setTimeout(cb, delay);
+}
+
+
 setSecondsTimeout(function () {
     console.log('hello');
 }, 1); // should print 'hello' after 1000 milliseconds
@@ -21,12 +30,6 @@ setSecondsTimeout(function () {
 setSecondsTimeout(function () {
     console.log('world');
 }, 1.4); // should print 'world' after 1400 milliseconds
-***********************************************************************/
-
-function setSecondsTimeout(cb, delayInSeconds) {
-  // Your code here 
-}
-
 /**************DO NOT MODIFY ANYTHING UNDER THIS  LINE*****************/
 try {
   module.exports = setSecondsTimeout;
